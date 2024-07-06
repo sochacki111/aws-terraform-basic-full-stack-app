@@ -1,0 +1,24 @@
+# Terraform state files
+terraform.tfstate
+terraform.tfstate.backup
+
+# Terraform variables files (if they contain sensitive information)
+*.tfvars
+
+# .terraform directory (contains the Terraform modules and plugins)
+.terraform/
+
+# Crash log files
+crash.log
+
+# Ignore override files which are not used in your project
+terraform.tfstate.*.backup
+*.tfplan
+
+# Ignore IDE/editor specific files
+.vscode/
+.idea/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
