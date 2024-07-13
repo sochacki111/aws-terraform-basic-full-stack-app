@@ -1,7 +1,7 @@
 data "archive_file" "lambda_zip" {
   type        = "zip"
-  source_file = "./resources/lambda_function.py"
-  output_path = "./resources/lambda_function.zip"
+  source_file = "./resources/lambda/lambda_function.py"
+  output_path = "./resources/lambda/lambda_function.zip"
 }
 
 resource "aws_lambda_function" "my_lambda_function" {

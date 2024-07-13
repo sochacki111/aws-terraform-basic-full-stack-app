@@ -22,3 +22,5 @@ terraform.tfstate.*.backup
 # Ignore OS generated files
 .DS_Store
 Thumbs.db
+
+resources/lambda/lambda_function.zip

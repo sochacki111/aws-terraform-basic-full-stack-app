@@ -42,7 +42,7 @@ resource "aws_s3_bucket_website_configuration" "static_website" {
   }
 }
 
-resource "aws_s3_object" "index" {
+resource "aws_s3_object" "index" { # TODO automate changing request url inside index.html
   bucket       = aws_s3_bucket.public_fortune_bucket.bucket
   key          = "index.html"
   source       = "./resources/s3/index.html"
