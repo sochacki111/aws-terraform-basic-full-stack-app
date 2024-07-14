@@ -5,7 +5,10 @@ def lambda_handler(event, context):
     import random
     import json
     from boto3.dynamodb.conditions import Key, Attr
-   
+    from botocore.vendored import requests
+    from aws_xray_sdk.core import xray_recorder
+    from aws_xray_sdk.core import patch_all
+    patch_all()
 
     fortid = (random.randint(1,16))
     dynamodb = boto3.resource("dynamodb")

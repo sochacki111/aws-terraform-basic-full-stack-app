@@ -25,3 +25,8 @@ resource "aws_iam_role_policy_attachment" "dynamodb_read_only_access" {
   role       = aws_iam_role.lambda_exec_role.name
   policy_arn = "arn:aws:iam::aws:policy/AmazonDynamoDBReadOnlyAccess"
 }
+
+resource "aws_iam_role_policy_attachment" "lambda_xray" {
+  policy_arn = "arn:aws:iam::aws:policy/AWSXRayDaemonWriteAccess"
+  role       = aws_iam_role.lambda_exec_role.name
+}
